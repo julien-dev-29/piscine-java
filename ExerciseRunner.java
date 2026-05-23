@@ -1,8 +1,11 @@
-import StringLength.StringLength;
+import Star.CelestialObject;
 
 public class ExerciseRunner {
     public static void main(String[] args) {
-        System.out.println(StringLength.getStringLength("Hello World !"));
-        System.out.println(StringLength.getStringLength(""));
+        CelestialObject celestialObject = new CelestialObject();
+        System.out.println(celestialObject.x);
+        System.out.println(celestialObject.y);
+        System.out.println(celestialObject.z);
+        System.out.println(celestialObject.name);
     }
 }
