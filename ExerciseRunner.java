@@ -1,20 +1,13 @@
-import Star.CelestialObject;
+import Star.Star;
 
 public class ExerciseRunner {
     public static void main(String[] args) {
-        CelestialObject defaultStar = new CelestialObject();
-        System.out.println(defaultStar.getX());
-        System.out.println(defaultStar.getY());
-        System.out.println(defaultStar.getZ());
-        System.out.println(defaultStar.getName());
+        Star star = new Star();
 
-        defaultStar.setName("Terre");
-        defaultStar.setX(0.43);
-        defaultStar.setY(0.98);
-        defaultStar.setZ(1.43);
-        System.out.println(defaultStar.getX());
-        System.out.println(defaultStar.getY());
-        System.out.println(defaultStar.getZ());
-        System.out.println(defaultStar.getName());
+        System.out.println(star.getName());
+        System.out.println(star.getX());
+        System.out.println(star.getY());
+        System.out.println(star.getZ());
+        System.out.println(star.getMagnitude());
     }
 }
