@@ -9,11 +9,14 @@ public class Capitalize {
         BufferedWriter writer = new BufferedWriter(new FileWriter(args[1]));
         String line;
         boolean firstLine = true;
+
         while ((line = reader.readLine()) != null) {
+
             if (!firstLine) {
                 writer.newLine();
             }
             String[] words = line.split(" ");
+
             for (int i = 0; i < words.length; i++) {
 
                 if (!words[i].isEmpty()) {
@@ -22,7 +25,6 @@ public class Capitalize {
                                     + words[i].substring(1).toLowerCase();
                 }
             }
-
             writer.write(String.join(" ", words));
             firstLine = false;
         }
