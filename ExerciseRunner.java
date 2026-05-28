@@ -1,12 +1,25 @@
-import List.ListSearchIndex;
+import Builder.ApartmentBuilder;
+import Builder.HouseBuilder;
+import Builder.Housing;
 
 import java.io.IOException;
-import java.util.List;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        System.out.println(ListSearchIndex.findLastIndex(List.of(9, 13, 89, 8, 23, 1, 0, 89), 89));
-        System.out.println(ListSearchIndex.findFirstIndex(List.of(9, 13, 89, 8, 23, 1, 0, 89), 89));
-        System.out.println(ListSearchIndex.findAllIndexes(List.of(9, 13, 89, 8, 23, 1, 0, 89), 89));
+        Housing house = new HouseBuilder()
+                .setName("Maison")
+                .setRooms(4)
+                .setSize(80)
+                .setPrice(100000)
+                .build();
+        Housing apartment = new ApartmentBuilder()
+                .setName("Appart")
+                .setRooms(2)
+                .setSize(30)
+                .setPrice(25000)
+                .build();
+
+        System.out.println(house);
+        System.out.println(apartment);
     }
 }
