@@ -1,25 +1,17 @@
-import Builder.ApartmentBuilder;
-import Builder.HouseBuilder;
-import Builder.Housing;
+import Decorator.BaseRaclette;
+import Decorator.Raclette;
+import Decorator.WithColdMeats;
+import Decorator.WithPickles;
 
 import java.io.IOException;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        Housing house = new HouseBuilder()
-                .setName("Maison")
-                .setRooms(4)
-                .setSize(80)
-                .setPrice(100000)
-                .build();
-        Housing apartment = new ApartmentBuilder()
-                .setName("Appart")
-                .setRooms(2)
-                .setSize(30)
-                .setPrice(25000)
-                .build();
-
-        System.out.println(house);
-        System.out.println(apartment);
+        Raclette r = new BaseRaclette();
+        System.out.println(r);
+        r = new WithPickles(r);
+        System.out.println(r);
+        r = new WithColdMeats(r);
+        System.out.println(r);
     }
 }
