@@ -1,4 +1,5 @@
 package Factory;
 
-public class Driver {
+public abstract class Driver {
+    public abstract Transport createTransport();
 }

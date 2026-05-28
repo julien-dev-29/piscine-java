@@ -1,17 +1,12 @@
-import Decorator.BaseRaclette;
-import Decorator.Raclette;
-import Decorator.WithColdMeats;
-import Decorator.WithPickles;
+import DoOp.DoOp;
 
 import java.io.IOException;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        Raclette r = new BaseRaclette();
-        System.out.println(r);
-        r = new WithPickles(r);
-        System.out.println(r);
-        r = new WithColdMeats(r);
-        System.out.println(r);
+        System.out.println(DoOp.operate(new String[]{"1", "+", "2"}));
+        System.out.println(DoOp.operate(new String[]{"1", "-", "1"}));
+        System.out.println(DoOp.operate(new String[]{"1", "%", "0"}));
+        System.out.println(DoOp.operate(args));
     }
 }
