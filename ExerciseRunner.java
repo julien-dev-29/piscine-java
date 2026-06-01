@@ -1,18 +1,15 @@
-import Strategy.ConcatStrategy;
-import Strategy.Context;
-import Strategy.MaxStrategy;
+import FloatOperations.FloatOperations;
 
 import java.io.IOException;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        Context context = new Context();
-        System.out.println(context.execute(23, 43));
+        System.out.println("Add");
+        System.out.println(FloatOperations.addTwoFloats(1.0f, 2.5f));
+        System.out.println(FloatOperations.addTwoFloats(15.18f, 68.28347f));
 
-        context.changeStrategy(new MaxStrategy());
-        System.out.println(context.execute(23, 43));
-
-        context.changeStrategy(new ConcatStrategy());
-        System.out.println(context.execute(23, 43));
+        System.out.println("Divide");
+        System.out.println(FloatOperations.divideTwoFloats(7.0f, 2.0f));
+        System.out.println(FloatOperations.divideTwoFloats(5.6f, 6.9f));
     }
 }
