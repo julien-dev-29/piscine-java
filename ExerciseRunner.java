@@ -1,15 +1,18 @@
-import FloatOperations.FloatOperations;
+import FormatDate.FormatDate;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        System.out.println("Add");
-        System.out.println(FloatOperations.addTwoFloats(1.0f, 2.5f));
-        System.out.println(FloatOperations.addTwoFloats(15.18f, 68.28347f));
-
-        System.out.println("Divide");
-        System.out.println(FloatOperations.divideTwoFloats(7.0f, 2.0f));
-        System.out.println(FloatOperations.divideTwoFloats(5.6f, 6.9f));
+        System.out.println(FormatDate
+                .formatToFullText(LocalDateTime.
+                        of(2021, 8, 22, 13, 25, 46)));
+        System.out.println(FormatDate
+                .formatSimple(LocalDate.of(2022, 2, 13)));
+        System.out.println(FormatDate
+                .formatIso(LocalTime.of(16, 18, 56, 8495847)));
     }
 }
