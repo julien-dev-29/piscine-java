@@ -1,18 +1,10 @@
-import FormatDate.FormatDate;
-
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        System.out.println(FormatDate
-                .formatToFullText(LocalDateTime.
-                        of(2021, 8, 22, 13, 25, 46)));
-        System.out.println(FormatDate
-                .formatSimple(LocalDate.of(2022, 2, 13)));
-        System.out.println(FormatDate
-                .formatIso(LocalTime.of(16, 18, 56, 8495847)));
+        System.out.println(CleanExtract
+                .extract("The|. quick brown. | what do you ..| .fox .|. Jumps over the lazy dog. ."));
+        System.out.println(CleanExtract
+                .extract("  | Who am .I  | .love coding,  |  |.  Coding is fun . | ...  "));
     }
 }
