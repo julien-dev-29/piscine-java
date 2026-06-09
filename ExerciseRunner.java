@@ -1,34 +1,25 @@
-import SetEquals.SetEquals;
+import SetOperations.SetOperations;
 
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        Set<String> set1 = new TreeSet<>();
-        set1.add("Alice");
-        set1.add("Bob");
-        set1.add("Charly");
+        Set<Integer> set1 = new HashSet<>();
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
 
-        Set<String> set2 = new TreeSet<>();
-        set2.add("Bob");
-        set2.add("Charly");
-        set2.add("Alice");
+        Set<Integer> set2 = new HashSet<>();
+        set2.add(2);
+        set2.add(3);
+        set2.add(4);
 
-        System.out.println(SetEquals.areSetsEqual(set1, set2)); // Expected Output: true
+        Set<Integer> unionSet = SetOperations.union(set1, set2);
+        System.out.println(unionSet); // Expected Output: [1, 2, 3, 4]
 
-        Set<String> set3 = new HashSet<>();
-        set3.add("Alice");
-        set3.add("Bob");
-        set3.add("Charly");
-
-        Set<String> set4 = new HashSet<>();
-        set4.add("Alice");
-        set4.add("Bob");
-        set4.add("Emily");
-
-        System.out.println(SetEquals.areSetsEqual(set3, set4)); // Expected Output: false
+        Set<Integer> intersectionSet = SetOperations.intersection(set1, set2);
+        System.out.println(intersectionSet); // Expected Output: [2, 3]
     }
 }
