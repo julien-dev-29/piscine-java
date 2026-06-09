@@ -1,10 +1,10 @@
+import KeepTheChange.KeepTheChange;
+
 import java.io.IOException;
+import java.util.Set;
 
 public class ExerciseRunner {
     public static void main(String[] args) throws IOException {
-        System.out.println(CleanExtract
-                .extract("The|. quick brown. | what do you ..| .fox .|. Jumps over the lazy dog. ."));
-        System.out.println(CleanExtract
-                .extract("  | Who am .I  | .love coding,  |  |.  Coding is fun . | ...  "));
+        System.out.println(KeepTheChange.computeChange(18, Set.of(1, 3, 7)));
     }
 }
