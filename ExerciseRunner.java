@@ -1,25 +1,11 @@
-import SetOperations.SetOperations;
+import StreamCollect.StreamCollect;
 
-import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.stream.Stream;
 
 public class ExerciseRunner {
-    public static void main(String[] args) throws IOException {
-        Set<Integer> set1 = new HashSet<>();
-        set1.add(1);
-        set1.add(2);
-        set1.add(3);
-
-        Set<Integer> set2 = new HashSet<>();
-        set2.add(2);
-        set2.add(3);
-        set2.add(4);
-
-        Set<Integer> unionSet = SetOperations.union(set1, set2);
-        System.out.println(unionSet); // Expected Output: [1, 2, 3, 4]
-
-        Set<Integer> intersectionSet = SetOperations.intersection(set1, set2);
-        System.out.println(intersectionSet); // Expected Output: [2, 3]
+    public static void main(String[] args) {
+        System.out.println(StreamCollect.mapByFirstLetter(Stream.of("Bonjour", "le", "monde !", "bonsoir")));
+        System.out.println(StreamCollect.getMaxByModulo4(Stream.of(5, 12, 32, 4, 9, 17, 98, 424, 97, 5843, 48354)));
+        System.out.println(StreamCollect.orderAndConcatWithSharp(Stream.of("Hello", "how are you ?", "where do you live ?", "Bordeaux")));
     }
 }
